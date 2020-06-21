@@ -4,9 +4,9 @@ public class QuickFind {
 
     private int[] id;
 
-    public QuickFind(int N) {
-        id = new int[N];
-        for (int i = 0; i < N; i++) {
+    public QuickFind(int n) {
+        id = new int[n];
+        for (int i = 0; i < n; i++) {
             id[i] = i;
         }
     }
@@ -26,10 +26,10 @@ public class QuickFind {
     }
 
     public static void main(String[] args) {
-        QuickFind qfuf = new QuickFind(5);
-        qfuf.union(1, 2);
-        qfuf.union(2, 4);
-        boolean isConnected = qfuf.connected(1, 4);
+        QuickFind qf = new QuickFind(5);
+        qf.union(1, 2);
+        qf.union(2, 4);
+        boolean isConnected = qf.connected(1, 4);
         System.out.println(isConnected);
     }
 }
